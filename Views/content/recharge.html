@@ -1,0 +1,114 @@
+<div class="sub_conbox">
+	<!--网络借款流程-->
+    <!--<div class="content_box">-->
+    <div class="iColumn_block  mgb23 clearfix">
+        <div class="iColumn_A index_media">
+            <div class="iColumn_s">
+                <h3 class="iColumn_s_title">网络借款流程</h3>
+            </div>
+            <div class="iColumn_content">
+                <ul class="nlist nlist_login clearfix">
+                    <li class="li_login">
+                        <div class="items items_login item01">
+                            <img src="../Styles/images/arrow.png" alt="" />
+                        </div>
+                        <p>申请</p>
+                    </li>
+                    <li class="li_login">
+                        <div class="items items_login item02">
+                            <img src="../Styles/images/arrow.png" alt="" />
+                        </div>
+                        <p>审核</p>
+                    </li>
+                    <li class="li_login">
+                        <div class="items items_login item03">
+                            <img src="../Styles/images/arrow.png" alt="" />
+                        </div>
+                        <p>合同签署</p>
+                    </li>
+                    <li class="li_login">
+                        <div class="items items_login item04">
+                            <img src="../Styles/images/arrow.png" alt="" />
+                        </div>
+                        <p>放款</p>
+                    </li>
+                    <li class="li_login">
+                        <div class="items items_login item05">
+                            <img src="../Styles/images/arrow.png" alt="" />
+                        </div>
+                        <p>还款结清</p>
+                    </li>
+                    <li class="li_login">
+                        <div class="items items_login item06">
+                        </div>
+                        <p>再次借款</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--网络借款流程 end--> 
+    <div class="iColumn_block mgb30 clearfix">
+        <div class="iColumn_A index_media">
+            <div class="iColumn_s">
+                <h3 class="iColumn_s_title">充值</h3>
+            </div>
+            <div class="iColumn_content">
+            	<div class="user_balance">
+            		<p>账户余额：&nbsp;<span id="usableBalance"></span>元</p>
+            	</div>
+                <div class="rechar_con">
+                	<ul class="tabs" id="tabs_switch">
+                		<li><a id="one1" for="con_one_1" class="selecte __switch" href="javascript:;">快捷充值</a><span class="bgbot"></span></li>
+        				<li><a id="one2" for="con_one_2" class="bor __switch" href="javascript:;" class="">网银充值</a></li>
+                	</ul>
+                	<div class="clearfix __switch_tab " id="con_one_1" style="display:block">
+                		<div class="rec_money">
+                			<p class="parm mb30">充值金额:<input id="amount" type="text" placeholder="请输入充值金额"/>元</p>
+                			<p>充值费用:&nbsp;&nbsp;<span id="cost"></span></p>
+                		</div>
+                		<p class="tips"><i class="cRed">*</i>快捷充值单笔最高5万元， 如需更高金额请使用网银充值</p>
+                	</div>
+					<div class="clearfix __switch_tab" id="con_one_2" style="display:none">
+                		<div class="rec_money">
+                			<p class="parm">充值金额:<input id="__bank_amount" type="text" placeholder="请输入充值金额"/>元</p>
+                		</div>
+                		<div class="banks_list" id="__banks_list">
+                			
+                		</div>
+                	    <div class="reminder mb40 mt50">
+                	    	<h3>友情提示</h3>
+                	    		<p>1、如果没有适合您的网银，可以通过线下汇款支付； </p>
+								<p>2、各银行卡充值限额不同，详情请联系各银行客服咨询。</p>
+                	    </div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:void(0);" for="one1" id="ins_Recharge" class="sub_login">立即充值</a>
+</div>
+<script>
+;!function(){
+	var methods = hmd.methods;
+// tab切换
+	methods.delegate({
+		$obj : $('#tabs_switch'),
+		callback : function(e){
+			var target = e.target,
+				ins_Recharge = $('#ins_Recharge');
+			if(target.nodeName === 'A'){
+				if($(target).hasClass('__switch')){
+					$(this).find('a.selecte').removeClass('selecte').addClass('bor');
+					$('div.__switch_tab').hide();
+					$(target).removeClass('bor').addClass('selecte');
+					$('#'+$(target).attr('for')).show();
+					ins_Recharge.attr('for',target.id);
+				}
+			}
+		}
+	});
+	
+}();
+        
+</script>

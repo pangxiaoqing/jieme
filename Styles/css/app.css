@@ -1,0 +1,95 @@
+
+/* =======main======= */
+.left{
+	float: left;
+}
+body{
+	background: #fff;
+}
+#main{
+	margin: 0 auto;
+	background: #fff;
+	width: 1200px;
+	height: auto;
+}
+/* =====main_1=========*/
+#main_1{
+	height: 800px;
+	width: 1200px;
+}
+#main_1 .app_phone{
+	width: 50%;
+	height: 632px;
+	text-align: center;
+	margin-top: 84px;
+}
+#main_1 .app_xiazai{
+	width: 50%;
+	height: 632px;
+	text-align: center;
+	margin-top: 160px;
+}
+.app_jieme{
+	font-size: 90px;
+	color: #006fb2;
+	height: 113px;
+}
+.app_nin{
+	font-size: 50px;
+	color: #006fb2;
+	height: 96px;
+}
+.app_erweima{
+	width: 173px;
+	height: 209px;
+	margin-left: 68px;
+}
+.app_load{
+	width: 173px;
+	height: 209px;
+	margin-left: 65px;
+	margin-top: 30px;
+}
+/*====main_1 end=======*/
+/*=======main_2=======*/
+.main_2{
+	width: 1200px;
+	height: 1000px;
+	
+}
+.main_2 .m2_1{
+	width: 50%;
+	text-align: center;
+	padding-top: 98px;
+}
+.main_2 .m2_2{
+	width: 50%;
+	text-align: right;
+	margin-top: 439px;
+	
+}
+.m2_p1{
+	font-size: 100px;
+	color: #ff8100;
+	height: 135px;
+}
+.m2_p2{
+	font-size: 40px;
+	color: #777;
+}
+/*======main_2 end====*/
+/*======main3====*/
+.main_2 .m3_1{
+	text-align: left;
+}
+.m3_p1{
+	color: #72bafa;
+}
+/*======main3 end =====*/
+/*======main4====*/
+
+.m4_p1{
+	color: #9572bb;
+}
+/*======main4 end =====*/
+/* =====main end======*/

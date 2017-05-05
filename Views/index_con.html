@@ -1,0 +1,237 @@
+
+  
+  <!--网络借款流程-->
+  <div class="iColumn">
+    <div class="iColumn_block clearfix">
+      <div class="iColumn_A index_media">
+        <div class="iColumn_s">
+        	<h3 class="iColumn_s_title">网络借款流程</h3>
+        </div>
+        <div class="iColumn_content">
+          <ul class="nlist clearfix">
+            <li>
+            	<div class="items item01">
+            		<img src="../Styles/images/arrow.png" alt="" />	
+            	</div>
+            	<p>申请</p>
+            </li>
+            <li>
+            	<div class="items item02">
+            		<img src="../Styles/images/arrow.png" alt="" />	
+            	</div>
+            	<p>审核</p>
+            </li>
+            <li>
+            	<div class="items item03">
+            		<img src="../Styles/images/arrow.png" alt="" />	
+            	</div>
+            	<p>合同签署</p>
+            </li>
+            <li>
+            	<div class="items item04">
+            		<img src="../Styles/images/arrow.png" alt="" />	
+            	</div>
+            	<p>放款</p>
+            </li>
+            <li>
+            	<div class="items item05">
+            		<img src="../Styles/images/arrow.png" alt="" />	
+            	</div>
+            	<p>还款结清</p>
+            </li>
+            <li>
+            	<div class="items item06">
+            	</div>
+            	<p>再次借款</p>
+            </li>
+          </ul>
+          <div class="abtn"><a href="javascript://" id="applyLoan">申请立即借款</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--网络借款流程 end--> 
+   <!--借么计算器-->
+   <div class="iColumn">
+    <div class="iColumn_block clearfix">
+      <div class="iColumn_A index_media">
+        <div class="iColumn_s pr">
+        	<h3 class="iColumn_s_title">借么计算器</h3>
+        	<div class="calu">
+        		<div class="apply pa">
+        			<span>申请金额</span><input type="text" placeholder="借款金额范围1-30万元" class="z_input"/><span>万元</span>
+        		</div>
+        		<div class="pa term">
+        			<select name="" class="tSel pr" >
+        				<option value="3">3个月</option>
+        				<option value="6">6个月</option>
+        				<option value="12">12个月</option>
+        				<option value="18">18个月</option>
+        				<option value="24">24个月</option>
+        				<option value="36">36个月</option>
+        				<option value="48">48个月</option>
+        			</select>
+        			<span class="pa allow">期限</span>
+        		</div>
+        		<a class="calulator pa z_jisuan" href="javascript://">计算</a>
+        	</div>
+        </div>
+        <div class="iColumn_content">
+        	<div class="conList">
+        		<table class="list">
+           	<tr class="boBtom">
+           		<td class="teven">信用等级</td>
+           		<td class="todd bgf3">A</td>
+           		<td class="todd">B</td>
+           		<td class="todd bgf3">C</td>
+           		<td class="todd">D</td>
+           		<td class="todd bgf3">E</td>
+           		<td class="todd">F</td>
+           	</tr>
+           	<tr class="boBtom">
+           		<td class="teven">月还款额</td>
+           		<td class="todd bgf3 Otd1">1200元</td>
+           		<td class="todd Otd1">1200元</td>
+           		<td class="todd bgf3 Otd1">1200元</td>
+           		<td class="todd Otd1">1200元</td>
+           		<td class="todd bgf3 Otd1">1200元</td>
+           		<td class="todd Otd1">1200元</td>
+           	</tr>
+           	<tr>
+           		<td class="teven">总还款额</td>
+           		<td class="todd bgf3 Otd">36000元</td>
+           		<td class="todd Otd">36000元</td>
+           		<td class="todd bgf3 Otd">36000元</td>
+           		<td class="todd Otd">36000元</td>
+           		<td class="todd bgf3 Otd">36000元</td>
+           		<td class="todd Otd">36000元</td>
+           	</tr>
+           </table>
+           <p><span>*</span>借款费率因信用等级、借款额度、借款期限的不同而不同 </p>
+           <p><span>*</span>信用等级由A-F依次降低，提交申请后，借么信审团队会根据信用资质评分规则判定信用等级</p>
+        	</div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--借么计算器 end-->
+  <!--借么-->
+   <div class="iColumn">
+    <div class="iColumn_block">
+     		<div class="iColumn_jieme  clearfix">
+     			<div class="fl">
+     				<img src="../Styles/images/jlogo.png" alt="jieme" />
+     			</div>
+        	<div class="articel fr mt44">
+        		<p>借么是信和大金融旗下信用借款平台，面向的借款对象主要是工薪层，目前推出“信易借”和“快易借”产品。</p>
+						<p>借么利用大数据系统，全自动信用评审模式，通过线上申请，提交相关资料，一键审批获取额度，不再需要</p>
+						<p>人工干预，使用最简单的操作，最快的获取到借款，让用户体验到极速、高额、循环借款的服务。</p>
+        	</div>
+        </div>
+      
+    </div>
+  </div>
+  <!--借么 end-->
+  <script>
+ 
+$(function(){
+			$("#header").find("ul.navBar").children("li").eq(1).removeClass("active");
+       $("#header").find("ul.navBar").children("li").eq(0).addClass("active");
+       var methods = hmd.methods;
+       //点击‘申请立即借款’判断是否跳转login
+	        $('#applyLoan').click(function(){
+	        	var token = methods.getCookie('token')
+        	  if(!token){
+        	  	 methods.operateLayer({$obj:$('#orderForm')},function(){
+									methods.clearText(methods.pub_data.html_arr);
+							 });
+        	  }else{
+        	  	$('#wraper').load('borrow.html',function(){
+        	  		window.scrollTo(0,0);
+        	  	})
+        	  }
+	        });
+	var obj={
+			"3":{
+				"a":"0.031",
+				"b":"0.03792",
+				"c":"0.04192",
+				"d":"0.04278",
+				"e":"0.04346",
+				"f":"0.04825"
+			},
+			"6":{
+				"a":"0.02041",
+				"b":"0.02537",
+				"c":"0.030245",
+				"d":"0.030945",
+				"e":"0.03191",
+				"f":"0.03525"
+			},
+			"12":{
+				"a":"0.01881",
+				"b":"0.02356",
+				"c":"0.026215",
+				"d":"0.02826",
+				"e":"0.02984",
+				"f":"0.03411"
+			},
+			"18":{
+				"a":"0.01834",
+				"b":"0.02251",
+				"c":"0.025755",
+				"d":"0.027525",
+				"e":"0.02961",
+				"f":"0.03352"
+			},
+			"24":{
+				"a":"0.01781",
+				"b":"0.02228",
+				"c":"0.02556",
+				"d":"0.027275",
+				"e":"0.02943",
+				"f":"0.03301"
+			},
+			"36":{
+				"a":"0.01759",
+				"b":"0.02202",
+				"c":"0.025505",
+				"d":"0.0272",
+				"e":"0.0293",
+				"f":"0.0326"
+			},
+			"48":{ 
+				"a":"0.01745",
+				"b":"0.02118",
+				"c":"0.02522",
+				"d":"0.02693",
+				"e":"0.02921",
+				"f":"0.03224"
+			}
+		
+	}
+	$(".z_jisuan").click(function(){
+		var Oinput=$(".z_input").val();
+		var Osel=$(".tSel").val();
+		var Oobj=obj[Osel];
+		var jsn=[];
+		var jsn1=[];
+		$.each(Oobj,function(i,arr){
+				var tex=(Oinput*10000*(1+Osel*Oobj[i])).toFixed(2);
+				var tex1=(tex/Osel).toFixed(2);
+				console.log(Oobj[i])
+					jsn.push(tex);
+					jsn1.push(tex1);
+			for(var j=0 ;j<$(".Otd").length;j++){
+//				console.log(jsn[j])
+						$(".Otd")[j].innerHTML=jsn[j]+"元";
+			}
+			for(var j=0 ;j<$(".Otd1").length;j++){
+//				console.log(jsn[j])
+						$(".Otd1")[j].innerHTML=jsn1[j]+"元";
+			}
+		})
+	})
+})
+</script>

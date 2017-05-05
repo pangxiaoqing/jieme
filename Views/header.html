@@ -1,0 +1,91 @@
+<div class="topBar">
+  <div class="w">
+     <!-- 未注册登录状态 -->
+    <div class="loginBar enten" style="display: none;"><a href="javascript://" id="register" class="btn-blue">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript://" id="login" class="btn-blue">登录</a></div>
+    <!-- 登录后进入我要借款页面后 -->
+    <div class="loginBar logout" style="display: none;"><a href="javascript://" id="register" class="btn-blue cBlue">您好！<span id="user"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript://" id="loginout" class="btn-blue">退出</a></div>
+    <div class="topTel">欢迎您来到借么!</div>
+    <a href="javascript:void(0);" class="topApp">客服电话：400-015-0808</a> </div>
+</div>
+<div class="headBar w">
+  <h1 class="logo">
+  	<a href="http://www.xinhe99.com">
+  		<img src="../Styles/images/xinhe99.png" alt="信和大金融-收益大不同" title=""/> 		
+  	</a>
+  	<a href="http://jmpc.xinhe99.com/Views/index.html">
+  		<img src="../Styles/images/jiemo.png" alt="借么" title=""/>
+  	</a>
+  </h1>
+  <ul class="navBar">
+    <li class="navBar_a active"><a id="index_page" href="javascript:void(0);">首页</a></li>
+    <li class="navBar_a"><a href="javascript:void(0);" id="borrow_page">我要借款</a></li>
+    <li class="navBar_a"><a id="app_download" href="javascript:void(0);">APP下载</a></li>
+  </ul>
+</div>
+<script>
+    !function(){
+    	var methods = hmd.methods,
+    			service = hmd.service;
+    	var token = hmd.methods.getCookie('token');
+    	methods.changePageByCookie(token,function(t){
+    		methods.loginByStatus();
+    	})
+    	//登出
+    	$('#loginout').click(function(){
+    		service.logout({
+    			userId : methods.getCookie('id')
+    		},function(response){
+    				hmd.methods.removeCookie('token');
+		    		hmd.methods.removeCookie('name');
+		    		hmd.methods.removeCookie('id');
+		    		methods.loginByStatus();
+    		});
+    		
+    	});
+    	
+    	//console.log(hmd.methods.getCookie('token'),hmd.methods.getCookie('id'),hmd.methods.getCookie('name'))
+    	//点击 app下载按钮 内容部分跳转至app.html 界面
+        $("#app_download").click(function(){
+            $('#wraper').load('app.html',function(){
+                window.scrollTo(0,0);
+                methods.operateMenuLight('app_download',function(){
+                    $(".banner").css("display","none");
+                    $("#wraper").css("width","100%");
+                    $('#wraper').removeClass('w_wraper');
+                    $("#header").css("border","none");
+                    $('#loginout').click(function(){
+                        var arr = ['token','name','id'];
+                        hmd.methods.removeCookie('token');
+                        hmd.methods.removeCookie('name');
+                        hmd.methods.removeCookie('id');
+
+                        methods.loginByStatus();
+
+                        methods.operateMenuLight('index_page',function(){
+                            $(".banner").css("display","block");
+                            $("#wraper").css("width","1200px");
+                            $('#wraper').addClass('w_wraper');
+                            $("#header").css("border-bottom","1px solid #ccc");
+                        })
+                    });
+                })
+
+            });
+        });
+        //点击 首页按钮 内容部分跳转至index_con.html界面
+        $("#index_page").click(function(){
+            $('#wraper').load('index_con.html',function(){
+            	  
+                window.scrollTo(0,0);
+                methods.operateMenuLight('index_page',function(){
+                    $(".banner").css("display","block");
+                    $("#wraper").css("width","1200px");
+                    $('#wraper').addClass('w_wraper');
+                    $("#header").css("border-bottom","1px solid #ccc");
+                })
+
+            });
+        });
+        
+    }();
+</script>

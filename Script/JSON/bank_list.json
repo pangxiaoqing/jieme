@@ -1,0 +1,92 @@
+{
+	"0801020000" : {
+		"bankCode" : "0801020000",
+		"bankName" : "中国工商银行",
+		"bankImage" : "icbc.jpg"
+	},
+	"0801030000" : {
+		"bankCode" : "0801030000",
+		"bankName" : "中国农业银行",
+		"bankImage" : "nongye.jpg"
+	},
+	"0801050000" : {
+		"bankCode" : "0801050000",
+		"bankName" : "中国建设银行",
+		"bankImage" : "jianhang.jpg"
+	},
+	"0803050000" : {
+		"bankCode" : "0803050000",
+		"bankName" : "中国民生银行",
+		"bankImage" : "minsheng.jpg"
+	},
+	"0801000000" : {
+		"bankCode" : "0801000000",
+		"bankName" : "中国邮政",
+		"bankImage" : "youzheng.jpg"
+	},
+	"0865012900" : {
+		"bankCode" : "0865012900",
+		"bankName" : "上海农村商业银行",
+		"bankImage" : "srcb.jpg"
+	},
+	"0803030000" : {
+		"bankCode" : "0803030000",
+		"bankName" : "中国光大银行",
+		"bankImage" : "guangda.jpg"
+	},
+	"0803040000" : {
+		"bankCode" : "0803040000",
+		"bankName" : "华夏银行",
+		"bankImage" : "hxb.jpg"
+	},
+	"0803080000" : {
+		"bankCode" : "0803080000",
+		"bankName" : "招商银行",
+		"bankImage" : "zhaohang.jpg"
+	},
+	"0804184930" : {
+		"bankCode" : "0804184930",
+		"bankName" : "洛阳市商业银行",
+		"bankImage" : "luoyangtrade.jpg"
+	},
+	"0801040000" : {
+		"bankCode" : "0801040000",
+		"bankName" : "中国银行",
+		"bankImage" : "chinaBank.jpg"
+	},
+	"0803010000" : {
+		"bankCode" : "0803010000",
+		"bankName" : "交通银行",
+		"bankImage" : "jiaotong.jpg"
+	},
+	"0803100000" : {
+		"bankCode" : "0803100000",
+		"bankName" : "上海浦东发展银行",
+		"bankImage" : "pufa.jpg"
+	},
+	"0803090000" : {
+		"bankCode" : "0803090000",
+		"bankName" : "兴业银行",
+		"bankImage" : "xingye.jpg"
+	},
+	"0803020000" : {
+		"bankCode" : "0803020000",
+		"bankName" : "中信银行",
+		"bankImage" : "zhongxin.jpg"
+	},
+	"0804031000" : {
+		"bankCode" : "0804031000",
+		"bankName" : "北京银行",
+		"bankImage" : "biejing.jpg"
+	},
+	"0803060000" : {
+		"bankCode" : "0803060000",
+		"bankName" : "广东发展银行",
+		"bankImage" : "guangfa.jpg"
+	},
+	"0804105840" : {
+		"bankCode" : "0804105840",
+		"bankName" : "平安银行",
+		"bankImage" : "pingan.jpg"
+	}
+}
